@@ -1,0 +1,61 @@
+<!-- popup.html 布局优化 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <script src="../lib/fontfaceobserver.standalone.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="settings-panel">
+      <!-- 背景颜色设置 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>背景颜色1</label>
+          <div class="input-group">
+            <input type="color" id="color1" class="color-picker">
+            <button id="randomBg" class="icon-btn" title="随机背景">🎲</button>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>背景颜色2</label>
+          <div class="input-group">
+            <input type="color" id="color2" class="color-picker">
+          </div>
+        </div>
+      </div>
+
+      <!-- 文字设置 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>字体大小（px）</label>
+          <div class="input-group">
+            <input type="number" id="fontSize" min="24" max="120" step="2" class="font-size-input">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>字体颜色</label>
+          <div class="input-group">
+            <input type="color" id="textColor">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <textarea id="textInput" placeholder="输入文章标题..."></textarea>
+    <button id="generateBtn" class="primary-btn">生成封面</button>
+    
+    <div class="preview-container">
+      <canvas id="canvas" width="1200" height="630"></canvas>
+    </div>
+    
+    <button id="downloadBtn" class="secondary-btn" disabled>
+      <span class="icon">⬇️</span> 下载图片
+    </button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
